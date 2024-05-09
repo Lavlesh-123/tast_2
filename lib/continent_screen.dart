@@ -41,14 +41,17 @@ class _ContinentScreenContent extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(7)),
               child: TextField(
+                textInputAction: TextInputAction.search,
                 controller: continentProvider.searchController,
                 onChanged: (value) {
                   continentProvider.filterCountries(value);
                 },
                 decoration: const InputDecoration(
+                
                   border: InputBorder.none,
                   labelText: 'Search Country',
                   prefixIcon: Icon(Icons.search),
+                  
                 ),
               ),
             ),
