@@ -45,12 +45,12 @@ class _DetailsScreenContent extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            _buildItem(context, 'Common Name:',
-                                provider.common),
-                            _buildItem(context, 'Official Name:',
-                                provider.official),
-                            _buildItem(context, 'Native Name:',
-                                provider.nativeName),
+                            _buildItem(
+                                context, 'Common Name:', provider.common),
+                            _buildItem(
+                                context, 'Official Name:', provider.official),
+                            _buildItem(
+                                context, 'Native Name:', provider.nativeName),
                             _buildItem(context, 'Independence :',
                                 provider.independent),
                             _buildItem(context, 'Status :', provider.status),
@@ -60,8 +60,7 @@ class _DetailsScreenContent extends StatelessWidget {
                                 context, 'Population :', provider.population),
                             _buildItem(context, 'Currency Name :',
                                 provider.currencyName),
-                            _buildItem(
-                                context, 'Capital :', provider.capital),
+                            _buildItem(context, 'Capital :', provider.capital),
                             _buildItem(context, 'Resion :', provider.resion),
                             _buildItem(
                                 context, 'subregion :', provider.subregion),
@@ -115,6 +114,3 @@ class _DetailsScreenContent extends StatelessWidget {
     );
   }
 }
-
-
-

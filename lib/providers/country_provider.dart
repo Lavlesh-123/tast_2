@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -40,7 +41,7 @@ class CountryProvider extends ChangeNotifier {
         throw Exception('Failed to load countries');
       }
     } catch (e) {
-      print('Error fetching countries: $e');
+      log('Error fetching countries: $e');
       _isLoading = false;
       notifyListeners();
     }

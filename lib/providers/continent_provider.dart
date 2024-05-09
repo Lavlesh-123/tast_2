@@ -1,7 +1,9 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+
 class ContinentProvider extends ChangeNotifier {
   final String continent;
   late List<Map<String, dynamic>> _countries;
@@ -41,7 +43,7 @@ class ContinentProvider extends ChangeNotifier {
         throw Exception('Failed to load countries');
       }
     } catch (e) {
-      print('Error fetching countries: $e');
+      log('Error fetching countries: $e');
     } finally {
       _isLoading = false;
       notifyListeners();
@@ -50,7 +52,6 @@ class ContinentProvider extends ChangeNotifier {
 
   void filterCountries(String searchText) {
     if (searchText.isEmpty) {
-      // If search text is empty, reset to original list
       _filteredCountries = List.from(_countries);
     } else {
       _filteredCountries = _countries.where((country) {

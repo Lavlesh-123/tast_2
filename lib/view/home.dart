@@ -31,7 +31,6 @@ class HomeView extends StatelessWidget {
                           blurRadius: 3 * i,
                           blurStyle: BlurStyle.outer)
                   ],
-                  // borderRadius: BorderRadius.circular(30),
                   gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
@@ -43,7 +42,10 @@ class HomeView extends StatelessWidget {
                   child: Center(
                       child: Text(
                 'Home',
-                style: TextStyle(fontSize: 25, color: Colors.white,fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
               ))),
             ),
             SizedBox(
@@ -104,7 +106,10 @@ class HomeView extends StatelessWidget {
                 ),
                 Text(
                   title,
-                  style: const TextStyle(fontSize: 30, color: Colors.black,fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 30,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -112,16 +117,5 @@ class HomeView extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-class HomeProvider extends ChangeNotifier {
-  String _selectedContinent = '';
-
-  String get selectedContinent => _selectedContinent;
-
-  void selectContinent(String continent) {
-    _selectedContinent = continent;
-    notifyListeners(); // Notify listeners that the state has changed
   }
 }

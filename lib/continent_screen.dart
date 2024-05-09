@@ -57,9 +57,6 @@ class _ContinentScreenContent extends StatelessWidget {
             child: Consumer<ContinentProvider>(
               builder: (context, provider, _) {
                 if (provider.isLoading) {
-                  // return const Center(
-                  //   child: CircularProgressIndicator(),
-                  // );
                   return _buildShimmeringTile();
                 } else {
                   return ListView.builder(
@@ -125,35 +122,35 @@ class _ContinentScreenContent extends StatelessWidget {
 
   Widget _buildShimmeringTile() {
     return ListView.builder(
-      itemCount: 25,
-      itemBuilder: ((context, index) {
-      return Shimmer.fromColors(
-        baseColor: Colors.grey[300]!,
-        highlightColor: Colors.grey[100]!,
-        child: ListTile(
-          tileColor: Colors.grey.shade300,
-          leading: Container(
-            width: 80,
-            height: 50,
-            color: Colors.grey,
-          ),
-          title: Container(
-            width: 150,
-            height: 20,
-            color: Colors.grey,
-          ),
-          subtitle: Container(
-            width: 50,
-            height: 12,
-            color: Colors.grey,
-          ),
-          trailing: Container(
-            width: 50,
-            height: 12,
-            color: Colors.grey,
-          ),
-        ),
-      );
-    }));
+        itemCount: 25,
+        itemBuilder: ((context, index) {
+          return Shimmer.fromColors(
+            baseColor: Colors.grey[300]!,
+            highlightColor: Colors.grey[100]!,
+            child: ListTile(
+              tileColor: Colors.grey.shade300,
+              leading: Container(
+                width: 80,
+                height: 50,
+                color: Colors.grey,
+              ),
+              title: Container(
+                width: 150,
+                height: 20,
+                color: Colors.grey,
+              ),
+              subtitle: Container(
+                width: 50,
+                height: 12,
+                color: Colors.grey,
+              ),
+              trailing: Container(
+                width: 50,
+                height: 12,
+                color: Colors.grey,
+              ),
+            ),
+          );
+        }));
   }
 }
