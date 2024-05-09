@@ -43,7 +43,7 @@ class HomeView extends StatelessWidget {
                   child: Center(
                       child: Text(
                 'Home',
-                style: TextStyle(fontSize: 25, color: Colors.white),
+                style: TextStyle(fontSize: 25, color: Colors.white,fontWeight: FontWeight.bold),
               ))),
             ),
             SizedBox(
@@ -84,7 +84,7 @@ class HomeView extends StatelessWidget {
                       blurRadius: 3 * i,
                       blurStyle: BlurStyle.outer)
               ],
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(10),
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -99,12 +99,12 @@ class HomeView extends StatelessWidget {
               children: [
                 const Icon(
                   Icons.language,
-                  color: Colors.black,
+                  color: Colors.white,
                   size: 50,
                 ),
                 Text(
                   title,
-                  style: const TextStyle(fontSize: 30, color: Colors.black),
+                  style: const TextStyle(fontSize: 30, color: Colors.black,fontWeight: FontWeight.bold),
                 ),
               ],
             ),
