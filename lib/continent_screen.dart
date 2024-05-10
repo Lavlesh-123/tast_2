@@ -119,7 +119,7 @@ class _ContinentScreenContent extends StatelessWidget {
       ),
       title: Text(countryName),
       subtitle: Text(capital),
-      trailing: Text('Population : ${population.toString()}'),
+      trailing: Text(' ${population.toString()}'),
     );
   }
 
